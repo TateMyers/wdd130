@@ -49,6 +49,7 @@ nav a:hover {
 
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
+    font-family: Kavoon;
 }
 
 .button-box {
@@ -95,10 +96,12 @@ main section {
 
 .msg h2 {
     color: white;
+    font-family: "Kavoon";
 }
 
 .msg p {
     color: white;
+    font-family: Permanent Marker, Helvetica, sans-serif;;
 }
 
 .icon {

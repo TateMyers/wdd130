@@ -1,0 +1,63 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #5ca1d7;
+    width: 50%;
+}
+
+h1 {
+    color: white;
+}
+
+h1:hover {
+    color: black;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.middle {
+    margin: 0 auto;
+}
+
+ol {
+    padding-bottom: 20px;
+}
+
+li {
+    color: black;
+    text-align: left;
+    line-height: 2;
+    font-weight: bold;
+}
+
+p {
+    color: white;
+}
+
+img {
+    width: 80%;
+}
+
+.huge {
+    font-size: 2em;
+}
+
+footer {
+    width: 30%;
+    margin: 0 auto;
+}
+
+footer > p {
+    color: black;
+}
+
+.no_bottom_space {
+    padding-bottom: -10px;
+}
+
+.no_top_space {
+    padding-top: -10px;
+}
+

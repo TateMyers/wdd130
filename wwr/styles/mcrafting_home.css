@@ -4,6 +4,8 @@
 /*-------------- body --------------*/
 body {
     background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 #content {
@@ -26,6 +28,12 @@ nav a {
     background: linear-gradient(to bottom right, #396E94, #02375d);
     color: white;
     text-decoration: none;
+    padding: 4px 7px;
+    font-size: 1.15em;
+    font-family: Kavoon;
+    border-radius: 5px;
+    margin: 5px 0px 3px 0px;
+
 }
 
 nav a:hover {
@@ -60,6 +68,8 @@ nav a:hover {
     background-color: #6a21a6;
     color: #68d9f8;
     text-decoration: none;
+    font-family: Kavoon;
+
 }
 
 .book:hover, .join:hover {
@@ -101,7 +111,7 @@ main section {
 
 .msg p {
     color: white;
-    font-family: Permanent Marker, Helvetica, sans-serif;;
+    font-family: Permanent Marker, Helvetica, sans-serif;
 }
 
 .icon {
@@ -111,6 +121,10 @@ main section {
 .card-img {
     width: 680px;
     height: 480px;
+}
+
+.card-txt {
+    font-family: Permanent Marker, Helvetica, sans-serif;
 }
 /*-------------- main --------------*/
 /*----------------------------------*/
@@ -139,6 +153,22 @@ footer a {
 
 footer a:hover {
     color: #44afe0;
+}
+
+.social-icon {
+    width: 5%;
+    margin: 3px 10px 5px 10px;
+    /* margin-bottom: 10px; */
+
+}
+
+/* .social-icon:hover {
+    border-style: solid;
+    border-color: #ca2a15;
+} */
+
+#first-sm-icon {
+    margin-left: 20px;
 }
 /*-------------- footer --------------*/
 /*------------------------------------*/

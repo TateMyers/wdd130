@@ -16,6 +16,7 @@ nav a {
   display: inline-block;
   margin: auto;
   text-shadow: 2px 2px 5px black;
+  /* box-sizing: border-box; */
 }
 
 nav a:hover {

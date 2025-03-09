@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Permanent+Marker:ital,wght@0,400;0,700;1,400&display=swap');
 
 /*----------------------------------*/
+/*----------------------------------*/
+/*----------------------------------*/
+/*-------------- HOME --------------*/
+/*----------------------------------*/
+
+/*----------------------------------*/
 /*-------------- body --------------*/
 body {
     background-color: white;
@@ -149,6 +155,8 @@ main section img {
 #background {
     height: 725px;
     background-color: #396E94;
+    grid-column: 1/11;
+    grid-row: 4/11;
 }
 
 .msg {
@@ -183,14 +191,9 @@ main section img {
     height: 70%;
     border: 10px solid #A42212;
     transition: transform .5s;
-    /*box-sizing: border-box;
-    object-fit: cover;
-    transform-origin: center center;
-    overflow: hidden;*/
 }
 
 .card-img:hover {
-    /* opacity: .7; */
     transform: scale(1.05);
 }
 
@@ -234,11 +237,6 @@ main section img {
     box-shadow: 10px 10px 10px #6f7364;
 }
 
-#background {
-    grid-column: 1/11;
-    grid-row: 4/11;
-}
-
 .mountains {
     grid-column: 2/6;
     grid-row: 6/9;
@@ -258,11 +256,12 @@ footer {
     background-color: black;
     color: white;
     padding: 25px;
-    /* margin-top: 25px; */
+    height: 157.6px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    column-gap: 20%;
+    text-align: center;
+    column-gap: 10%;
 }
 
 footer p {
@@ -272,6 +271,11 @@ footer p {
 
 footer p a:hover {
     text-decoration: underline;
+}
+
+.social-container {
+    text-align: center;
+    flex-grow: 1;
 }
 
 footer a {
@@ -284,21 +288,161 @@ footer a:hover {
 }
 
 .social-icon {
-    width: 20%;
-    margin: 3px 10px 5px 10px;
+    width: 10%;
+    /* margin: 3px 10px 5px 10px; */
 }
 
  .social-icon:hover {
     opacity: .8;
 }
-
-/* #first-sm-icon {
-    margin-left: 20px;
-} */
 /*-------------- footer --------------*/
 /*------------------------------------*/
 
+/*----------------------------------*/
+/*-------------- HOME --------------*/
+/*----------------------------------*/
+/*----------------------------------*/
+/*----------------------------------*/
 
+
+
+
+
+
+/*----------------------------------*/
+/*----------------------------------*/
+/*----------------------------------*/
+/*------------- PAGE 2 -------------*/
+/*----------------------------------*/
+
+/*----------------------------------*/
+/*-------------- body --------------*/
+
+/*-------------- body --------------*/
+/*----------------------------------*/
+
+/*------------------------------------*/
+/*-------------- header --------------*/
+.hdr2 {
+    margin-bottom: 150px;
+}
+/*-------------- header --------------*/
+/*------------------------------------*/
+
+/*----------------------------------*/
+/*-------------- main --------------*/
+.p2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    background-color: #396E94;
+    padding: 50px;
+    column-gap: 50px;
+}
+
+.p2h2 {
+    font-family: "Kavoon", sans-serif;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.p2_para1, .p2_para2 {
+    color: white;
+    font-family: Permanent Marker, Helvetica, sans-serif;
+    place-self: center;
+}
+
+.p2main {
+    width: 75%;
+    place-self: center;
+}
+
+#discover_title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    /* margin-top: 50px; */
+}
+
+#compass {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    box-shadow: 15px 15px 15px black;
+}
+
+.msg1_p2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #5a0e05;
+    box-shadow: -15px 15px 15px black, 5px 5px 15px black;
+    padding: 10px;
+}
+
+.msg1_p2 a, .msg2_p2 a {
+    color: #68d9f8;
+    text-decoration: none;
+    font-family: Kavoon;
+}
+
+.msg1_p2 a:hover, .msg2_p2 a:hover {
+    color: #3c9fbb;
+}
+
+#aquire_title {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    place-self: center;
+    align-self: end;
+    margin-top: 50px;
+}
+
+.msg2_p2 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-color: #5a0e05;
+    box-shadow: 15px 15px 15px black;
+    padding: 10px;
+}
+
+#stars {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 100%;
+    height: 100%;
+    box-shadow: -15px 15px 15px black, 5px 5px 15px black;
+}
+
+.big_img {
+    grid-column: 3/4;
+    grid-row: 2/5;
+    width: 100%;
+    height: 100%;
+    box-shadow: 15px 15px 15px black, -5px 5px 15px black;
+}
+
+/*-------------- main --------------*/
+/*----------------------------------*/
+
+/*------------------------------------*/
+/*-------------- footer --------------*/
+.ftr_p2 {
+    margin-top: 150px;
+}
+
+.ftr_p2 a {
+    justify-content: center;
+}
+
+.ftr_p2 .social-icon {
+    width: 13.65%;
+}
+/*-------------- footer --------------*/
+/*------------------------------------*/
+
+/*----------------------------------*/
+/*------------- PAGE 2 -------------*/
+/*----------------------------------*/
 
 
 @media screen and (max-width: 900px) {
@@ -358,14 +502,15 @@ footer a:hover {
 
     footer {
         margin-top: 25px;
+        text-align: left;
+        height: auto;
     }
-    /* .logo {
-        padding: 0px;
-        margin-top: -100%;
-    } */
+
+    .ftr_p2 .social-icon {
+        width: 10%;
+    }
+
+    .social-container {
+        text-align: left;
+    }
 }
-            
-
-
-
-/* make the freaking change */

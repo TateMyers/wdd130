@@ -26,7 +26,10 @@ Fonts are separated by a | */
   --nav-hover-background-color: #434343;
 }
 
-
+.wireframe_img {
+  width: 80%;
+  height: 80%;
+}
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {

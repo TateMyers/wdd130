@@ -473,6 +473,10 @@ footer a:hover {
     border: 1px solid #ccc;
     border-radius: 1em;
   }
+
+  form p {
+    font-family: Permanent Marker, Helvetica, sans-serif;
+  }
   
   p + p {
     margin-top: 1em;
@@ -524,14 +528,17 @@ footer a:hover {
   }
   
 #feedback {
-    background-color: antiquewhite;
+    background-color: #02375d;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     padding: .5em;
     /* make this element invisible until we are ready for it */
-    display: none;      
+    display: none;
+    font-family: Permanent Marker, Helvetica, sans-serif;
+    color: #44afe0;
+    margin-bottom: 10px;
 }
 .moveDown {
     margin-top: 3em;
@@ -610,5 +617,8 @@ footer a:hover {
 
     .social-container {
         text-align: left;
+    }
+    #feedback {
+        margin-bottom: 10px;
     }
 }

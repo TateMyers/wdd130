@@ -538,7 +538,6 @@ footer a:hover {
     display: none;
     font-family: Permanent Marker, Helvetica, sans-serif;
     color: #44afe0;
-    margin-bottom: 10px;
 }
 .moveDown {
     margin-top: 3em;
@@ -618,7 +617,8 @@ footer a:hover {
     .social-container {
         text-align: left;
     }
+    
     #feedback {
-        margin-bottom: 10px;
+        opacity: 0.7;
     }
 }

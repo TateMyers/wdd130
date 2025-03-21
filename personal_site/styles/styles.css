@@ -5,16 +5,250 @@
 /*----------------------------------*/
 /*-------------- HOME --------------*/
 /*----------------------------------*/
+html {
+    background-color: black;
+}
 
+h2 {
+   font-family: Audiowide, "Trebuchet MS", sans-serif;
+}
+
+p {
+    font-family: Tektur, "Courier New", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 /*----------------------------------*/
 /*-------------- main --------------*/
+#home-div-content {
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+    height: 100%;
+}
 
+#navigation_txt_activities_on_home {
+    color: #fbff06;
+    text-shadow: 1px 1px 0px red;
+}
+ 
+#navigation_txt_home_on_home {
+    color: #30ea33;
+    text-shadow: 1px 1px 0px rgb(255, 196, 0);
+}
+
+#navigation_txt_attractions_on_home {
+    color: #c824c0;
+    text-shadow: 1px 1px 0px rgb(0, 217, 255);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+section h2 {
+    width: 90%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.nav-activities_page, .nav-home_page, .nav-attractions_page {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+#activities_icon, #home_icon, #attractions_icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+}
+
+#home_icon {
+    width: 50%;
+    height: 50%;
+}
+
+.z_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+
+#activities_icon {
+    z-index: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;    
+}
+
+.overlay {
+    z-index: 1;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-radius: 40%;
+}
+
+@keyframes rainbow {
+    0% {
+        background: linear-gradient(to bottom, rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.4)); /* Start with red */
+    }
+    14% {
+        background: linear-gradient(to bottom, rgba(255, 165, 0, 0.4), rgba(255, 165, 0, 0.4)); /* Transition to orange */
+    }
+    28% {
+        background: linear-gradient(to bottom, rgba(255, 255, 0, 0.4), rgba(255, 255, 0, 0.4)); /* Transition to yellow */
+    }
+    42% {
+        background: linear-gradient(to bottom, rgba(0, 128, 0, 0.4), rgba(0, 128, 0, 0.4)); /* Transition to green */
+    }
+    57% {
+        background: linear-gradient(to bottom, rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.4)); /* Transition to blue */
+    }
+    71% {
+        background: linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(75, 0, 130, 0.4)); /* Transition to indigo */
+    }
+    85% {
+        background: linear-gradient(to bottom, rgba(128, 0, 128, 0.4), rgba(128, 0, 128, 0.4)); /* Transition to violet */
+    }
+    100% {
+        background: linear-gradient(to bottom, rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.4)); /* Start with red */
+    }
+}
+.overlay:hover {
+    animation: rainbow 0.8s ease-in-out forwards infinite; /* Apply circular motion on hover */
+}
+
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg); /* Initial state */
+    }
+    25% {
+        transform: rotate(10deg); /* Rotate 10deg to the right */
+    }
+    50% {
+        transform: rotate(-10deg); /* Rotate back 10deg to the left */
+    }
+    75% {
+        transform: rotate(10deg); /* Rotate back to the right 10deg */
+    }
+    100% {
+        transform: rotate(0deg); /* Return to the initial state */
+    }
+}
+#home_icon:hover {
+    animation: rotateIcon 1s ease-in-out; /* Apply the cumulative rotation over 1 second */
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#attractions_icon:hover {
+    animation: enlarge 1s ease-in-out;
+}
+
+.home-main-grid {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/nav_screen_background.png');
+    background-repeat: repeat;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, min(32vw, 32vh));
+    grid-template-rows: repeat(3, min(32vw, 32vh));
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.nav-activities_page {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+#big_logo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.nav-home_page {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.nav-attractions_page {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
 /*-------------- main --------------*/
 /*----------------------------------*/
 
 /*----------------------------------*/
 /*------------- footer -------------*/
+footer {
+    width: 100%;
+    padding: 5px;
+}
 
+.home-footer {
+    background-color: black;
+}
+
+footer p {
+    color: #af0505;
+}
+
+footer a {
+    font-family: Silkscreen;
+    color: #00ddff;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+   color: #9de7f3;
+   text-decoration: underline;
+
+}
 /*------------- footer -------------*/
 /*----------------------------------*/
 

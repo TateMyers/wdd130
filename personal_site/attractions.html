@@ -5,49 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attractions</title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css" />
-
 </head>
 
-
-
 <body>
+    <header class="attractions-header">
+        <a href="index.html">
+            <img class="navigation_img-header" id="home_icon-header" src="images/earth.webp" alt="Earth">
+        </a>
+        
+        <a href="activities.html" class="z_grid-header">
+            <img class="navigation_img-header" id="activities_icon-header" src="images/space_yacht.png" alt="space yacht">
+            <div class="overlay" id="overlay-header"></div>
+        </a>
+        
+        <a href="attractions.html">
+            <img class="navigation_img-header" id="attractions-header" src="images/learn_final.png" alt="telescope">
+        </a>
+    </header>
+    
     <div class="content" id="attractions-div-content"> 
-        <header class="attractions-header">
-            <a href="index.html">
-                <img class="navigation_img-header" id="home_icon-header" src="images/earth.webp" alt="Earth">
-            </a>
+        <h1 class="attractions_h1">On this all expenses paid vacation to outer space we will visit the sights of the solar system!</h1>
+        
+        <div class="slideshow-container">
+            <div class="my_slides">
+                <img id="asteroid" src="images/asteroid_belt.webp" alt="Asteroid Belt">
+                <p id="asteroid_p">Hold on tight as we take you through the Asteroid Belt located between Mars and Jupiter. Don't worry, the asteroids are more spread out than you may think, and there will be plenty of opportunity to rock climb on them!</p>
+            </div>
+            <div class="my_slides">
+                <img src="images/venus.webp" alt="Venus">
+                <p id="venus_p">Let's check out the brightest planet in the night sky! Also known as the Earth's twin, Venus has spectacular cloud coverage that never goes away and never disappoints.</p>
+            </div>
+            <div class="my_slides">
+                <img src="images/comet.webp" alt="Comet">
+                <p id="comet_p">Make a wish as we journey to the Kuiper Belt, home of icy dwarf planets and comets. Perfect time to use our available spaceboards!</p>
+            </div>
 
-            <a href="activities.html" class="z_grid-header">
-                <img class="navigation_img-header" id="activities_icon-header" src="images/space_yacht.png" alt="space yacht">
-                <div class="overlay" id="overlay-header"></div>
-            </a>
-
-            <a href="attractions.html">
-                <img class="navigation_img-header" id="attractions-header" src="images/learn_final.png" alt="telescope">
-            </a>
-        </header>
-
-        <main class="attractions-main-grid">
-            <section>
-                <div></div>
-                <h1>On this all expences paid vacation to outer space we will visit the sights of the solar system!</h1>
-            </section>
-            <img src="images/asteroid_belt.webp" alt="asteroid belt">
-            <img src="images/venus.webp" alt="venus">
-            <p>Hold on tight as we take you through the Asteroid Belt located between Mars and Jupiter. Don't worry, the asteroids are more spread out than you may think, and there will be plenty of opportunity to rock climb on them!</p>
-            <img src="images/comet.webp" alt="comet">
-            <p>Let's check out the brightest planet in the night sky! Also known as the Earth's twin, Venus has spectacular cloud coverage that never goes away and never dissapoints.</p>
-            <p>Make a wish as we journey to the Kuiper Belt, home of icey dwarf planets and comets. Perfect time to use our available spaceboards!</p>
-        </main>
-
-
-        <footer class="subpage-footer">
-            <p>Mosey Cozy R and R &copy; 2025 - Tate Myers</p>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="activities.html">Activities</a></p>
-            <p><a href="attractions.html">Attractions</a></p>
-            <p><a href="../index.html">Me Page</a></p>
-        </footer>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
     </div>   
+
+    <footer class="subpage-footer">
+        <p>Mosey Cozy R and R © 2025 - Tate Myers</p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="activities.html">Activities</a></p>
+        <p><a href="attractions.html">Attractions</a></p>
+        <p><a href="../index.html">Me Page</a></p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        // Show the first slide initially
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n; // Adjust slideIndex
+            showSlides(); // Call showSlides to display the current slide
+        }
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("my_slides");
+            if (slideIndex >= slides.length) { slideIndex = 0; } // Wrap to first
+            if (slideIndex < 0) { slideIndex = slides.length - 1; } // Go to last
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Hide all slides
+            }
+            slides[slideIndex].style.display = "block"; // Show current slide
+        }
+    </script>
 </body>
 </html>

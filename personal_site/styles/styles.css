@@ -9,14 +9,6 @@ html {
     background-color: black;
 }
 
-h1 {
-    font-family: Audiowide, "Trebuchet MS", sans-serif;
-    color: #fbff06;
-    text-shadow: 2px 2px 0px red;
-    background-color: rgba(5, 5, 5, 0.938);
-    text-align: center;
-}
-
 h2 {
    font-family: Audiowide, "Trebuchet MS", sans-serif;
    color: #63e74f;
@@ -208,6 +200,13 @@ section h2 {
 #big_logo {
     grid-column: 2/3;
     grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+#big_logo img {
     width: 100%;
     height: 100%;
     align-self: center;
@@ -416,6 +415,14 @@ header:hover .z_grid-header {
     background-repeat: repeat;
 }
 
+.activities_h1 {
+    font-family: Audiowide, "Trebuchet MS", sans-serif;
+    color: #fbff06;
+    text-shadow: 2px 2px 0px red;
+    background-color: rgba(5, 5, 5, 0.938);
+    text-align: center;
+}
+
 .activities-main-grid {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -496,12 +503,6 @@ header:hover .z_grid-header {
 /*----------------------------------*/
 
 /*----------------------------------*/
-/*------------- footer -------------*/
-
-/*------------- footer -------------*/
-/*----------------------------------*/
-
-/*----------------------------------*/
 /*----------- Activities -----------*/
 /*----------------------------------*/
 /*----------------------------------*/
@@ -519,21 +520,89 @@ header:hover .z_grid-header {
 /*-----------------------------------*/
 
 /*----------------------------------*/
-/*------------- header -------------*/
-
-/*------------- header -------------*/
-/*----------------------------------*/
-
-/*----------------------------------*/
 /*-------------- main --------------*/
+ .attractions_h1 {
+    font-family: Audiowide, "Trebuchet MS", sans-serif;
+    color: #c824c0;
+    text-shadow: 2px 2px 0px rgb(0, 217, 255);
+    background-color: rgba(5, 5, 5, 0.938);
+    text-align: center;
+}
 
+#attractions-div-content {
+    background-image: url('../images/nav_screen_background.png');
+    background-repeat: repeat;
+}
+
+.slideshow-container {
+    width: 80%; 
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slideshow-container p {
+    color: #30ea33;
+    place-self: center;
+}
+
+.my_slides {
+    display: none;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.879);
+    text-align: center;
+}
+
+.my_slides img {
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+#asteroid {
+    width: 45%;
+    object-fit: cover;
+}
+.prev, .next {
+    cursor: pointer;
+    /* position: absolute;
+    top: 50%; Vertical center 
+    width: auto; */
+    padding: 16px;
+    color: #c824c0;
+    font-weight: bold;
+    font-size: 2em;
+    user-select: none;
+}
+
+.prev {
+    left: 0; /* Position left */
+}
+
+.next {
+    right: 0; /* Position right */
+}
+
+.prev:hover, .next:hover {
+    color: rgb(0, 217, 255);
+}
+
+#asteroid_p, #venus_p, #comet_p {
+    height: 60px;
+    width: 45%;
+    /* overflow-y: auto; */
+    margin: auto;
+    text-align: center;
+}
 /*-------------- main --------------*/
-/*----------------------------------*/
-
-/*----------------------------------*/
-/*------------- footer -------------*/
-
-/*------------- footer -------------*/
 /*----------------------------------*/
 
 /*-----------------------------------*/
@@ -541,3 +610,12 @@ header:hover .z_grid-header {
 /*-----------------------------------*/
 /*-----------------------------------*/
 /*-----------------------------------*/
+@media screen and (max-width: 900px) {
+    #asteroid_p, #venus_p, #comet_p {
+        height: 60px;
+        width: 45%;
+        overflow-y: auto;
+        margin: auto;
+        text-align: center;
+    }
+}

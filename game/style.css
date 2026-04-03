@@ -5,6 +5,7 @@
   gap: 5px;
   width: max-content;
   margin: 50px auto;
+  background-image: url(assets/techBkgrnd.jpg);
 }
 
 .cell {

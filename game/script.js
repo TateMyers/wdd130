@@ -18,7 +18,7 @@ function drawGrid() {
       // Check if player is here
       if (r === player.row && c === player.col) {
         const img = document.createElement("img");
-        img.src = "game/assets/monsterDude.png"; // replace with your image
+        img.src = "assets/monsterDude.png"; // replace with your image
         img.classList.add("player");
         cell.appendChild(img);
       }
